@@ -1,0 +1,438 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables for Consistent Theming */
+:root {
+    --primary-color: red; 
+    --secondary-color: #ffffff;
+    --accent-color: #FFD700; /* Gold */
+    --background-color: #f5f5f5;
+    --text-color: #333333;
+    --header-bg: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+    --footer-bg: #2E8B57;
+    --button-bg: #FFD700;
+    --button-text: #2E8B57;
+    --button-hover-bg: #FFC300;
+    --transition-speed: 0.3s;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+}
+
+/* General Styling */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    background: var(--header-bg);
+    color: var(--secondary-color);
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(3, 4, 94, 0.7);
+}
+
+header h1 {
+    font-family: var(--font-secondary);
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--accent-color);
+    color: ghostwhite;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color var(--transition-speed), transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-3px);
+}
+
+/* Main Content Styling */
+main {
+    padding: 60px 0;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background-color: var(--secondary-color);
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.newsletter h2 {
+    text-align: center;
+    font-family: var(--font-secondary);
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-3px);
+}
+
+/* Features Section */
+.features {
+    background-color: var(--secondary-color);
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.features h2 {
+    text-align: center;
+    font-family: var(--font-secondary);
+    color: black;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.feature-item {
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.feature-item i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-family: var(--font-secondary);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #555555;
+}
+
+/* Instructions Section */
+.instructions {
+    background-color: var(--secondary-color);
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.instructions h3 {
+    text-align: center;
+    font-family: var(--font-secondary);
+    color: black;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.instructions ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.instructions li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #555555;
+}
+
+.instructions li::before {
+    content: '\f00c'; /* Font Awesome Check Icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+/* Footer Styling */
+
+
+footer {
+    background-color: #30405E; 
+    color: var(--secondary-color);
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer nav {
+    margin-bottom: 15px;
+}
+
+footer nav a {
+    color: var(--secondary-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color var(--transition-speed);
+}
+
+footer nav a:hover {
+    color: var(--accent-color);
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.popup-content {
+    background-color: var(--secondary-color);
+    padding: 40px 30px;
+    border-radius: 10px;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5em;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color var(--transition-speed);
+}
+
+.close-btn:hover {
+    color: var(--primary-color);
+}
+
+.popup-content h3 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: var(--font-secondary);
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+
+.popup-content .form-group {
+    margin-bottom: 20px;
+}
+
+.popup-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color var(--transition-speed);
+}
+
+.popup-content input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.popup-content button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.2s;
+}
+
+.popup-content button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .feature-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 80px 20px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+
+    .newsletter h2,
+    .features h2 {
+        font-size: 2em;
+    }
+
+    .instructions h3 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 60px 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .feature-item {
+        width: 100%;
+    }
+
+    .popup-content {
+        padding: 30px 20px;
+    }
+}
